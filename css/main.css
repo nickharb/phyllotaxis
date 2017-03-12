@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+body {
+    font-size: 14px;
+    color: #222;
+    background-color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.site {
+    padding-top: 70px;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+p {}
+a {}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.site-header .navbar {
+    background-color: #000;
+    /*border-bottom: 1px solid #ddd;*/
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    background-color: #337AB7;
+    color: #fff;
+}
+
+/* ==========================================================================
+   Main content
+   ========================================================================== */
+.site-content {
+    padding: 40px 0 40px;
+}
+
+#p5canvas {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+/* ==========================================================================
+   Sliders
+   ========================================================================== */
+.phyllo-ui {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 400px;
+    padding: 0 20px;
+    background-color: #fff;
+}
+
+.ui-slider {
+    margin: 50px 20px 40px;
+}
+
+.noUi-horizontal {
+    height: 12px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 30px;
+    height: 22px;
+    left: -15px;
+    top: -6px;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 12px;
+    width: 1px;
+    background: #E8E7E6;
+    left: 11px;
+    top: 4px;
+}
+
+.noUi-handle:after {
+    left: 16px;
+}
+
+.noUi-tooltip {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.noUi-value-sub {
+    display: none;
+}
+
+.noUi-pips-horizontal {
+    padding: 4px 0;
+    height: 40px;
+}
+
+.noUi-marker-horizontal.noUi-marker {
+    background: #ccc;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+    height: 12px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+    height: 8px;
+}
+
+.noUi-value-horizontal {
+    font-size: 14px;
+    padding-top: 2px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    /*background-color: #333;
+    color: #fff;
+    padding: 20px 0;*/
+}
+
+@media only screen and (max-width: 450px) {}
+
+

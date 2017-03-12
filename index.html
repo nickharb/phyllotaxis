@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Phyllotaxis</title>
+        <meta name="author" content="Nick Harbaugh" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="css/vendor/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/vendor/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/vendor/nouislider.tooltips.css" rel="stylesheet" type="text/css"/>
+        <link href="css/vendor/nouislider.pips.css" rel="stylesheet" type="text/css"/>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <div class="site">
+
+            <!-- Site header -->
+            <div class="site-header">
+                <nav class="navbar navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Brand</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="main-nav">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                            </ul>
+                        </div><!-- .navbar-collapse -->
+                    </div><!-- .container-fluid -->
+                </nav>
+            </div><!-- .site-header -->
+
+            <!-- Site content -->
+            <div class="site-content">
+                <div class="container-fluid">
+                    <div id="p5canvas"></div>
+                    <div class="phyllo-ui">
+                        <div id="fib-slider" class="ui-slider"></div>
+                        <div id="red-slider" class="ui-slider"></div>
+                        <div id="green-slider" class="ui-slider"></div>
+                    </div>
+                </div>
+            </div><!-- .site-content -->
+
+            <div class="site-footer">
+                <div class="container-fluid">
+                </div>
+            </div>
+
+        </div><!-- .site -->
+
+        <!-- Load scripts -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/wNumb.js"></script>
+        <script src="js/vendor/nouislider.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/addons/p5.dom.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
+
+
+
