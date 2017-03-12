@@ -40,7 +40,7 @@
 
         var fAngle = fibAngle + fibVal;
 
-        translate(width/2, height/2);
+        translate(width*0.66, height*0.5);
 
         for (var i = 0; i < numSeeds; i++) {
 
