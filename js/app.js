@@ -15,8 +15,11 @@
     var angle;
     var numSeeds = 500;
     var fibSlider = document.getElementById('fib-slider');
-    var redSlider = document.getElementById('red-slider');
-    var greenSlider = document.getElementById('green-slider');
+    // var redSlider = document.getElementById('red-slider');
+    // var greenSlider = document.getElementById('green-slider');
+    var scaleSlider = document.getElementById('scale-slider');
+    var nodeSlider = document.getElementById('node-slider');
+    var countSlider = document.getElementById('count-slider');
     var fibVal = 0,
         redVal = 0,
         greenVal = 0;
@@ -34,9 +37,13 @@
     function draw() {
         background(0);
         noStroke();
+
         fibVal = parseFloat(fibSlider.noUiSlider.get());
-        redVal = parseInt(redSlider.noUiSlider.get());
-        greenVal = parseInt(greenSlider.noUiSlider.get());
+        s = parseInt(scaleSlider.noUiSlider.get());
+        nodeVal = parseInt(nodeSlider.noUiSlider.get());
+        numSeeds = parseInt(countSlider.noUiSlider.get());
+        // redVal = parseInt(redSlider.noUiSlider.get());
+        // greenVal = parseInt(greenSlider.noUiSlider.get());
 
         var fAngle = fibAngle + fibVal;
 
@@ -46,7 +53,7 @@
 
             var rVal = map(i, 0, numSeeds, 0, 50);
             var gVal = map(i, 0, numSeeds, 0, 255);
-            fill(redVal, gVal, 250);
+            fill(rVal, gVal, 250);
 
             angle = i * fAngle;
             radius = s * sqrt(i);
@@ -54,7 +61,7 @@
             var x = radius * cos(angle);
             var y = radius * sin(angle);
 
-            ellipse(x, y, 10);
+            ellipse(x, y, nodeVal);
         }
 
         // fibAngle += 0.00001;
@@ -83,11 +90,11 @@
             // }
         });
 
-        noUiSlider.create(redSlider, {
-            start: [0],
-            direction: 'ltr', // Put '0' at the bottom of the slider
-            orientation: 'horizontal', // Orient the slider vertically
-            behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+        noUiSlider.create(scaleSlider, {
+            start: [10],
+            direction: 'ltr',
+            orientation: 'horizontal',
+            behaviour: 'tap-drag',
             step: 1,
             tooltips: true,
             format: wNumb({
@@ -95,15 +102,15 @@
             }),
             range: {
                 'min': 0,
-                'max': 255
+                'max': 20
             }
         });
 
-        noUiSlider.create(greenSlider, {
-            start: [0],
-            direction: 'ltr', // Put '0' at the bottom of the slider
-            orientation: 'horizontal', // Orient the slider vertically
-            behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+        noUiSlider.create(nodeSlider, {
+            start: [30],
+            direction: 'ltr',
+            orientation: 'horizontal',
+            behaviour: 'tap-drag',
             step: 1,
             tooltips: true,
             format: wNumb({
@@ -111,7 +118,23 @@
             }),
             range: {
                 'min': 0,
-                'max': 255
+                'max': 100
+            }
+        });
+
+        noUiSlider.create(countSlider, {
+            start: [300],
+            direction: 'ltr',
+            orientation: 'horizontal',
+            behaviour: 'tap-drag',
+            step: 1,
+            tooltips: true,
+            format: wNumb({
+                decimals: 0
+            }),
+            range: {
+                'min': 0,
+                'max': 1000
             }
         });
     }
